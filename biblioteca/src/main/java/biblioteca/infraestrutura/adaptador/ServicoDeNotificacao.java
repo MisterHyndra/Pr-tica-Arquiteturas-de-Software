@@ -14,7 +14,7 @@ public class ServicoDeNotificacao {
 
     public Consumer<EmprestimoRealizadoEvento> handler() {
         return evt -> {
-            // In a real system we would lookup usuario and emprestimo; here we rely on wrapper to provide lookup
+            // Em um sistema real buscaríamos o usuário e o empréstimo; aqui confiamos no wrapper para fornecer a busca
             wrapper.notificarEmprestimo(evt.usuarioId(), evt.emprestimoId());
         };
     }
